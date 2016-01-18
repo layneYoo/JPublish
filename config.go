@@ -5,6 +5,7 @@ package main
 import (
 	"errors"
 	"flag"
+	//"fmt"
 	"os"
 
 	"github.com/shoenig/config"
@@ -17,6 +18,7 @@ func cliargs() (config, host, login, format string) {
 	flag.StringVar(&login, "u", "", "username and password")
 	flag.StringVar(&format, "f", "", "output format")
 	flag.Parse()
+
 	return
 }
 
