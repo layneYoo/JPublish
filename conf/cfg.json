@@ -9,6 +9,6 @@
 		"deployJson" : "/opt/deploy",
 		"gitlib" : "http://github.cn",
 		"registry" : "http://123.com",
-		"dockerPrefix" : "http://123/com/qrcode"
+		"dockerPre" : "http://123/com/qrcode"
 	}
 }
