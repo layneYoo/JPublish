@@ -179,6 +179,10 @@ type Marathon struct {
 	Password string `json:"password"`
 }
 
+type MarathonObj struct {
+	Marathoninfo Marathon `json:"marathoninfo"`
+}
+
 // add struct : base (for docker image)
 type Base struct {
 	BuildPath  string `json:"buildPath"`

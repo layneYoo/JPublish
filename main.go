@@ -4,7 +4,7 @@
 package main
 
 import (
-	"flag"
+	//"flag"
 	"fmt"
 	"os"
 )
@@ -75,6 +75,7 @@ func Usage() {
 	os.Exit(1)
 }
 
+/*
 func main() {
 	host, login, format, e := Config()
 
@@ -152,6 +153,7 @@ func main() {
 
 	t.Start(flag.Args())
 }
+*/
 
 func Check(b bool, args ...interface{}) {
 	if !b {
