@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"reflect"
 	"strings"
 )
 
@@ -45,6 +46,7 @@ type Tool struct {
 	selections map[string]Selector
 }
 
+/*
 func (t *Tool) Start(args []string) {
 	if len(args) == 0 {
 		Usage()
@@ -54,6 +56,30 @@ func (t *Tool) Start(args []string) {
 	} else {
 		selection.Select(args[1:])
 	}
+}
+*/
+func (t *Tool) Start(args interface{}) {
+	if args == nil {
+		Usage()
+	}
+	marathonCtl := reflect.ValueOf(args)
+	hostInfo := marathonCtl.Field(0)
+	actInfo := marathonCtl.Field(1)
+	baseInfo := marathonCtl.Field(2)
+	fmt.Println(hostInfo)
+	fmt.Println(actInfo)
+	fmt.Println(baseInfo)
+	// choose the action
+	marathonAct := actInfo.Field(0).String()
+	switch marathonAct {
+	case "app list":
+		fmt.Println("app list")
+	default:
+		fmt.Println("default")
+	}
+
+	//act := marathonCtl.Actioninfo.act
+	//fmt.Println(act)
 }
 
 type Client struct {

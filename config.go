@@ -3,7 +3,7 @@
 package main
 
 import (
-	"errors"
+	//"errors"
 	"flag"
 	//"fmt"
 	"os"
@@ -84,7 +84,7 @@ func Config() (string, string, string, error) {
 	}
 
 	if host == "" {
-		return "", "", "", errors.New("no host info provided")
+		//return "", "", "", errors.New("no host info provided")
 	}
 
 	return host, login, format, nil

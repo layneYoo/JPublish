@@ -179,10 +179,6 @@ type Marathon struct {
 	Password string `json:"password"`
 }
 
-type MarathonObj struct {
-	Marathoninfo Marathon `json:"marathoninfo"`
-}
-
 // add struct : base (for docker image)
 type Base struct {
 	BuildPath  string `json:"buildPath"`
@@ -190,4 +186,14 @@ type Base struct {
 	Gitlib     string `json:"gitlib"`
 	Registry   string `json:"registry"`
 	DockerPre  string `json:"dockerPre"`
+}
+
+type Actionmarathon struct {
+	Act string `json:"act"`
+}
+
+type MarathonObj struct {
+	Marathoninfo Marathon       `json:"marathoninfo"`
+	Actioninfo   Actionmarathon `json:"actinfo"`
+	Baseinfo     Base           `json:"baseinfo"`
 }

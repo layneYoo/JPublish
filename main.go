@@ -75,9 +75,10 @@ func Usage() {
 	os.Exit(1)
 }
 
-/*
 func main() {
-	host, login, format, e := Config()
+	marathonObj := JsonConfig()
+	//host, login, format, e := Config()
+	_, _, format, e := Config()
 
 	if e != nil {
 		fmt.Printf("config error: %s\n\n", e)
@@ -85,7 +86,8 @@ func main() {
 	}
 
 	f := NewFormatter(format)
-	l := NewLogin(host, login)
+	//l := NewLogin(host, login)
+	l := NewLogin(marathonObj.Marathoninfo.Host, "")
 	c := NewClient(l)
 	app := &Category{
 		actions: map[string]Action{
@@ -151,9 +153,9 @@ func main() {
 		},
 	}
 
-	t.Start(flag.Args())
+	//t.Start(flag.Args())
+	t.Start(marathonObj)
 }
-*/
 
 func Check(b bool, args ...interface{}) {
 	if !b {
