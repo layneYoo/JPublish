@@ -1,7 +1,17 @@
 {
 	"marathoninfo" : {
-		"host" : "*.*.*.*:8080",
+		"host" : "http://1.1.1.1:8080",
 		"user" : "user",
 		"password" : "test"
+	},
+	"baseinfo" : {
+		"buildPath" : "/opt",
+		"deployJson" : "/opt/deploy",
+		"gitlib" : "http://github.cn",
+		"registry" : "http://123.com",
+		"dockerPre" : "http://123/com/qrcode"
+	},
+	"actinfo" : {
+		"act": "app list"	
 	}
 }
